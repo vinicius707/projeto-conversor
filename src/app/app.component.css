@@ -1,0 +1,17 @@
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    font-family: 'Heebo', sans-serif;
+    margin-top: 150px;
+}
+
+    .main-content h1 i {
+        color:darkkhaki;
+        margin-left: 10px ;
+    }
+
+   
+        
