@@ -1,11 +1,14 @@
 <nav class="countries">
-    <button type="button" (click) = "calc(input)"><i class="fas fa-dollar-sign"></i></button>
-    <button type="button"><i class="fas fa-euro-sign"></i></button>
-    <button type="button"><i class="fas fa-pound-sign"></i></button>
+    <button type="button" name="USD" (click)="usdClick($event)"><i class="fas fa-dollar-sign"></i></button>
+    <button type="button" name="EUR" (click)="eurClick($event)"><i class="fas fa-euro-sign"></i></button>
+    <button type="button" name="GBP" (click)="gbpClick($event)"><i class="fas fa-pound-sign"></i></button>
 </nav>
 
 <form class="form-currency">
-    <input type="number" placeholder="Digite um valor R$" name="input-value" (keyup)="calcValue($event)">
-    <br />
-    <output name="result"> {{ result | number: '2.2'}}</output>
+    <span>{{chooseCountry}}</span>
+    <input type="number" name="input-value" (keyup)="onChangeInterCoin($event)" value="{{intercoin}}">
+    <label for="input-value">Para</label>
+    <span>{{countryFixed}}</span>
+    <input type="number" name="input-value" (keyup)="onChangeBrCoin($event)" value="{{brcoin}}">
 </form>
+

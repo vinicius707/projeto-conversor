@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http';
 
 export class ApiService {
 
-  private apiUrl = "https://api.exchangeratesapi.io/latest?base=BRL";
+  private apiUrl = "https://api.exchangeratesapi.io/latest?base=";
 
   constructor(private http: HttpClient) { }
 
-  getCurrencies(){
-    return this.http.get(this.apiUrl);
+  getCurrencies(base:any){
+    let currency = this.apiUrl+base
+    return this.http.get(currency);
   }
 
 }
