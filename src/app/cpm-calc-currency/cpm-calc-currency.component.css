@@ -1,29 +1,39 @@
 /* Formulário com os inputs para cálculo das moedas */
 .form-currency {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    margin-top: 100px;
+    max-width: 800px;
+    max-height: 500px;
+    margin-top: 5%;
     text-align: center;
     transition: all 5s ease-in;
 }
 .form-currency span {
-    padding: 0 15px;
+    width: 100%;
+    padding: 15px;
 }
 .form-currency label {
-    padding: 15px;
+    padding: 25px 0 20px 0;
 }
 
 .form-currency input {
     display: inline-block;
     border: none;
-    width: 50%;
-    height: 50px;
+    width: 70%;
     font-size: 20px;
     background: transparent;
     border-bottom: 2px solid #7aacff;
     color: #fff;
+}
+.form-currency input {
+    border: 0 0 1 0 none;
+    outline: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::-webkit-input-placeholder {

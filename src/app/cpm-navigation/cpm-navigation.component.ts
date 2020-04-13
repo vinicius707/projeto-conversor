@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CpmCalcCurrencyComponent } from '../cpm-calc-currency/cpm-calc-currency.component';
 
 @Component({
   selector: 'app-cpm-navigation',
@@ -10,6 +11,6 @@ export class CpmNavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }
