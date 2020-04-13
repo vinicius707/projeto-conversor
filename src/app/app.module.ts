@@ -10,11 +10,13 @@ import {HttpClientModule} from '@angular/common/http';
 
 // Import Service 
 import { ApiService } from './api.service';
+import { CpmNavigationComponent } from './cpm-navigation/cpm-navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CpmCalcCurrencyComponent
+    CpmCalcCurrencyComponent,
+    CpmNavigationComponent
   ],
   imports: [
     BrowserModule,
