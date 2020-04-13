@@ -50,20 +50,20 @@ export class CpmCalcCurrencyComponent implements OnInit {
   usdClick(event) {
     this.getCoin('USD')
     this.chooseCountry = 'USD'
-    this.brcoin = this.dollar
+    this.brcoin = this.dollar.toFixed(2)
   }
 
   eurClick(event) {
     this.getCoin('EUR')
     this.chooseCountry = 'EUR'
-    this.brcoin = this.euro
+    this.brcoin = this.euro.toFixed(2)
     
   }
 
   gbpClick(event) {
     this.getCoin('GBP')
     this.chooseCountry = 'GBP'
-    this.brcoin = this.pound
+    this.brcoin = this.pound.toFixed(2)
     
   }
 
