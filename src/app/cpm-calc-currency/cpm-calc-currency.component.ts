@@ -24,19 +24,16 @@ export class CpmCalcCurrencyComponent implements OnInit {
   dollar: number
   euro: number
   pound: number
+  
   constructor(private currency: ApiService) { }
 
-  ngOnInit() {
-    // this.currency.getCurrencies().subscribe((data) => {
-    //   this.dateCurrency =  Object.create(data);
-    //   console.log(this.dateCurrency)
-    // });  
+  ngOnInit() { 
     this.getCoin('USD')
     this.chooseCountry = 'USD'
   }
 
 
-
+// Função para alterar a API //
   getCoin(base: any) {
     this.currency.getCurrencies(base).subscribe(
       (data) => {
@@ -71,8 +68,6 @@ export class CpmCalcCurrencyComponent implements OnInit {
   }
 
   // Switch case  para cada opção de moeda //
-
-
   onChangeInterCoin(event) {
     this.intercoin = event.target.value
     let multiply
@@ -107,23 +102,3 @@ export class CpmCalcCurrencyComponent implements OnInit {
     this.intercoin = divider.toFixed(3)
   }
 }
-
-
-
-  // calcValue(event) {
-  //    this.currencyInput = event.target.value;
-  //    this.result = this.currencyInput * this.dateCurrency.GBP
-  // }
-
-  // calc(input){
-
-  // }
-
-  // corruncyToda(valorDoInput){
-  //   uns dos valores = chama api 
-  // ? como vamos chamar o tipo de moeda separadamente
-  //   bloco de execução
-  //   Valor da moeda * ValordoInput
-  // }
-
-
