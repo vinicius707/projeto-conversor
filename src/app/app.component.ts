@@ -11,8 +11,7 @@ export class AppComponent {
   title = 'Currency';
 
   showInput(event){
-    // let teste =  document.querySelectorAll(".form-currency");
-    // teste.style.display = "block";
+
   }
 
 }
