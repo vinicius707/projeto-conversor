@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CpmNavigationComponent } from './cpm-navigation.component';
+import { CpmChartCurrencyComponent } from './cpm-chart-currency.component';
 
-describe('CpmNavigationComponent', () => {
-  let component: CpmNavigationComponent;
-  let fixture: ComponentFixture<CpmNavigationComponent>;
+describe('CpmChartCurrencyComponent', () => {
+  let component: CpmChartCurrencyComponent;
+  let fixture: ComponentFixture<CpmChartCurrencyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CpmNavigationComponent ]
+      declarations: [ CpmChartCurrencyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CpmNavigationComponent);
+    fixture = TestBed.createComponent(CpmChartCurrencyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

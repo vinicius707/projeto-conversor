@@ -8,11 +8,10 @@ import { ApiService } from '../api.service';
   styleUrls: ['./cpm-calc-currency.component.css']
 })
 export class CpmCalcCurrencyComponent implements OnInit {
-
+  // inputs
   intercoin:any
   brcoin:any
-
-  dateCurrency: any;
+  // 
   result: number;
   currencyToday: number;
   currencyInput;
@@ -20,7 +19,7 @@ export class CpmCalcCurrencyComponent implements OnInit {
   objFull: any
   chooseCountry = ''
   countryFixed = 'BRL'
-  defaultValue = (1.000).toFixed(3)
+  defaultValue = (1.000).toFixed(2)
   dollar: number
   euro: number
   pound: number
@@ -30,21 +29,6 @@ export class CpmCalcCurrencyComponent implements OnInit {
   ngOnInit() { 
     this.getCoin('USD')
     this.chooseCountry = 'USD'
-  }
-
-
-// Função para alterar a API //
-  getCoin(base: any) {
-    this.currency.getCurrencies(base).subscribe(
-      (data) => {
-        this.objFull = new Object(data);
-
-        this.dollar = this.objFull.rates.BRL
-        this.euro = this.objFull.rates.BRL
-        this.pound = this.objFull.rates.BRL
-        this.brcoin = this.objFull.rates.BRL.toFixed(2)
-        this.intercoin = this.defaultValue
-      })
   }
 
   usdClick(event) {
@@ -57,14 +41,26 @@ export class CpmCalcCurrencyComponent implements OnInit {
     this.getCoin('EUR')
     this.chooseCountry = 'EUR'
     this.brcoin = this.euro.toFixed(2)
-    
   }
 
   gbpClick(event) {
     this.getCoin('GBP')
     this.chooseCountry = 'GBP'
     this.brcoin = this.pound.toFixed(2)
-    
+  }
+  
+// Função para alterar a API //
+  getCoin(base: any) {
+    this.currency.getCurrencies(base).subscribe(
+      (data) => {
+        this.objFull = new Object(data);
+
+        this.dollar = this.objFull.rates.BRL
+        this.euro = this.objFull.rates.BRL
+        this.pound = this.objFull.rates.BRL
+        this.brcoin = this.objFull.rates.BRL.toFixed(2)
+        this.intercoin = this.defaultValue
+      })
   }
 
   // Switch case  para cada opção de moeda //
@@ -99,6 +95,6 @@ export class CpmCalcCurrencyComponent implements OnInit {
         divider = this.brcoin / this.pound
         break;
     }
-    this.intercoin = divider.toFixed(3)
-  }
+    this.intercoin = divider.toFixed(2)
+}
 }
